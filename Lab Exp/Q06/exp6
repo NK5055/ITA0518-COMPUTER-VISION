@@ -1,0 +1,94 @@
+# ============================================
+# AIM:
+# Read a captured video in Python and display
+# the video in slow motion and fast motion.
+# ============================================
+
+# Upload Video
+from google.colab import files
+uploaded = files.upload()
+
+# Get uploaded video filename
+video_file = list(uploaded.keys())[0]
+
+import cv2
+from IPython.display import HTML, display
+
+# Open video
+cap = cv2.VideoCapture(video_file)
+
+# Check if video opened successfully
+if not cap.isOpened():
+    print("Error: Cannot open video.")
+else:
+    # Get video properties
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+    print("Video Loaded Successfully")
+    print("FPS:", fps)
+    print("Resolution:", width, "x", height)
+
+    # Define codec
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+
+    # Create output video writers
+    slow_writer = cv2.VideoWriter(
+        "slow_motion.mp4",
+        fourcc,
+        fps/2,
+        (width, height)
+    )
+
+    fast_writer = cv2.VideoWriter(
+        "fast_motion.mp4",
+        fourcc,
+        fps*2,
+        (width, height)
+    )
+
+    # Read frames and write
+    while True:
+        ret, frame = cap.read()
+
+        if not ret:
+            break
+
+        slow_writer.write(frame)
+        fast_writer.write(frame)
+
+    # Release resources
+    cap.release()
+    slow_writer.release()
+    fast_writer.release()
+
+    print("Slow Motion and Fast Motion Videos Created Successfully!")
+
+# Convert videos to browser-compatible format
+!apt-get -qq install ffmpeg
+
+!ffmpeg -loglevel error -y -i slow_motion.mp4 -vcodec libx264 slow_output.mp4
+!ffmpeg -loglevel error -y -i fast_motion.mp4 -vcodec libx264 fast_output.mp4
+
+print("Conversion Completed")
+
+# Display Slow Motion Video
+print("Slow Motion Video")
+display(HTML("""
+<video width="500" controls>
+    <source src="slow_output.mp4" type="video/mp4">
+</video>
+"""))
+
+# Display Fast Motion Video
+print("Fast Motion Video")
+display(HTML("""
+<video width="500" controls>
+    <source src="fast_output.mp4" type="video/mp4">
+</video>
+"""))
+
+# Download the output videos
+files.download("slow_output.mp4")
+files.download("fast_output.mp4")
