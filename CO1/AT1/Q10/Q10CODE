@@ -1,0 +1,71 @@
+import cv2
+import matplotlib.pyplot as plt
+from google.colab import files
+
+# Upload image
+print("Upload a road or vehicle image")
+uploaded = files.upload()
+
+filename = list(uploaded.keys())[0]
+
+# Read image
+img = cv2.imread(filename)
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# -------------------------------
+# Create Low-Resolution Image
+# -------------------------------
+small = cv2.resize(img, (80, 80), interpolation=cv2.INTER_AREA)
+
+# Upscale back to original size
+low_resolution = cv2.resize(
+    small,
+    (img.shape[1], img.shape[0]),
+    interpolation=cv2.INTER_NEAREST
+)
+
+# -------------------------------
+# Sharpen Enhanced Image
+# -------------------------------
+kernel = [[0,-1,0],
+          [-1,5,-1],
+          [0,-1,0]]
+
+import numpy as np
+kernel = np.array(kernel)
+
+enhanced = cv2.filter2D(low_resolution, -1, kernel)
+
+# -------------------------------
+# Display Images
+# -------------------------------
+plt.figure(figsize=(15,5))
+
+plt.subplot(1,3,1)
+plt.imshow(img)
+plt.title("Original Image")
+plt.axis("off")
+
+plt.subplot(1,3,2)
+plt.imshow(low_resolution)
+plt.title("Low Resolution (Poor Sampling)")
+plt.axis("off")
+
+plt.subplot(1,3,3)
+plt.imshow(enhanced)
+plt.title("Enhanced Image")
+plt.axis("off")
+
+plt.show()
+
+# -------------------------------
+# Result
+# -------------------------------
+print("\n========== SAMPLING ANALYSIS ==========")
+print("Original Resolution :", img.shape[1], "x", img.shape[0])
+print("Reduced Sampling    : 80 x 80 pixels")
+print("Image Formation     : Reduced object clarity")
+print("Enhanced Image      : Improved sharpness")
+print("Observation         : Low sampling decreases object visibility.")
+print("Conclusion          : Higher sampling improves object detection.")
+print("=======================================")
