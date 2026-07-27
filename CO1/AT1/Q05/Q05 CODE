@@ -1,0 +1,61 @@
+import cv2
+import matplotlib.pyplot as plt
+from google.colab import files
+
+# Upload surveillance image
+print("Upload a surveillance image")
+uploaded = files.upload()
+
+image_name = next(iter(uploaded))
+
+# Read image
+img = cv2.imread(image_name)
+
+# Resize image for better processing
+img = cv2.resize(img, (700, 500))
+
+# Initialize HOG Person Detector
+hog = cv2.HOGDescriptor()
+hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+
+# Detect people
+boxes, weights = hog.detectMultiScale(
+    img,
+    winStride=(8,8),
+    padding=(16,16),
+    scale=1.05
+)
+
+count = 0
+
+# Draw bounding boxes
+for (x, y, w, h) in boxes:
+    count += 1
+    cv2.rectangle(img, (x, y), (x+w, y+h), (255,0,0), 2)
+    cv2.putText(img,
+                f"Person {count}",
+                (x, y-8),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (255,0,0),
+                2)
+
+# Display image
+plt.figure(figsize=(10,7))
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.title("Surveillance Human Detection")
+plt.axis("off")
+plt.show()
+
+# Result
+print("="*45)
+print("SURVEILLANCE REPORT")
+print("="*45)
+print("Humans Detected :", count)
+
+if count > 0:
+    print("Computer Vision Level : HIGH-LEVEL")
+    print("Reason : The system automatically detects")
+    print("         and recognizes people in the scene.")
+else:
+    print("No humans detected.")
