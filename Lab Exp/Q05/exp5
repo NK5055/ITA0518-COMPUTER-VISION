@@ -1,0 +1,30 @@
+import cv2
+import numpy as np
+from google.colab.patches import cv2_imshow
+
+# Upload the image
+uploaded = files.upload()
+
+# Get uploaded filename
+filename = list(uploaded.keys())[0]
+
+# Read the image
+img = cv2.imread(filename)
+
+# Convert image to grayscale
+gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
+
+# Perform erosion
+eroded_image = cv2.erode(gray_image, kernel, iterations=1)
+
+# Save the output image
+cv2.imwrite("Eroded_Image.jpg", eroded_image)
+
+# Display original image
+print("Original Image")
+cv2_imshow(img)
+
+# Display eroded image
+print("Eroded Image")
+cv2_imshow(eroded_image)
