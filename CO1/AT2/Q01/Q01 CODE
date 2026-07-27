@@ -1,0 +1,71 @@
+                          REAL-WORLD SCENE
+                                  │
+          ┌───────────────────────┼────────────────────────┐
+          │                       │                        │
+      Objects                Illumination             Environment
+          │                       │                        │
+          └───────────────────────┼────────────────────────┘
+                                  │
+                           Image Formation
+                                  │
+         ┌────────────────────────┼─────────────────────────┐
+         │                        │                         │
+     Reflection             Camera Lens              Perspective
+         │                        │                         │
+         └────────────────────────┼─────────────────────────┘
+                                  │
+                             Image Sensor
+                     (CCD / CMOS Camera Sensor)
+                                  │
+                   Converts Light into Electrical Signal
+                                  │
+                         Analog Image Signal
+                                  │
+                           Analog-to-Digital
+                             Converter (ADC)
+                                  │
+        ┌─────────────────────────┼─────────────────────────┐
+        │                         │                         │
+    Sampling                 Quantization            Encoding
+        │                         │                         │
+ Determines Pixels        Determines Intensity      Binary Values
+ (Spatial Resolution)      (Gray Levels/Bits)        (0s and 1s)
+        │                         │                         │
+        └─────────────────────────┼─────────────────────────┘
+                                  │
+                         Digital Image Matrix
+                         (Rows × Columns × Pixels)
+                                  │
+         ┌────────────────────────┼─────────────────────────┐
+         │                        │                         │
+     Grayscale Image         Color Image (RGB)        Binary Image
+                                  │
+                     Image Representation
+                                  │
+         ┌────────────────────────┼─────────────────────────┐
+         │                        │                         │
+     Pixel Values           Resolution               Bit Depth
+         │                        │                         │
+         └────────────────────────┼─────────────────────────┘
+                                  │
+                       Digital Image Processing
+                                  │
+ ┌─────────────┬─────────────┬──────────────┬──────────────┬──────────────┐
+ │             │             │              │              │
+ Enhancement Restoration Segmentation Feature Extraction Compression
+ │             │             │              │              │
+ Noise      Blur Removal  Object        Edge, Corner     Storage &
+ Removal                    Detection     Texture        Transmission
+                                  │
+                           Computer Vision
+                                  │
+      ┌───────────────────────────┼────────────────────────────┐
+      │                           │                            │
+ Object Detection          Pattern Recognition         Image Classification
+      │                           │                            │
+      └───────────────────────────┼────────────────────────────┘
+                                  │
+                           Decision Making
+                                  │
+          Medical Imaging • Face Recognition • Autonomous Vehicles
+          Remote Sensing • Industrial Inspection • Robotics
