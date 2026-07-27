@@ -1,0 +1,55 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from google.colab import files
+
+# Upload grayscale image
+print("Upload a grayscale image")
+uploaded = files.upload()
+
+filename = list(uploaded.keys())[0]
+
+# Read image in grayscale
+img = cv2.imread(filename, cv2.IMREAD_GRAYSCALE)
+
+# Function for quantization
+def quantize(image, levels):
+    step = 256 // levels
+    return (image // step) * step
+
+# Different quantization levels
+q256 = img
+q64 = quantize(img, 64)
+q16 = quantize(img, 16)
+q4 = quantize(img, 4)
+
+# Display images
+plt.figure(figsize=(12,8))
+
+titles = ["Original (256 Levels)",
+          "64 Levels",
+          "16 Levels",
+          "4 Levels"]
+
+images = [q256, q64, q16, q4]
+
+for i in range(4):
+    plt.subplot(2,2,i+1)
+    plt.imshow(images[i], cmap='gray')
+    plt.title(titles[i])
+    plt.axis("off")
+
+plt.show()
+
+# Output
+print("\n========== QUANTIZATION REPORT ==========")
+print("Original Image      : 256 Gray Levels")
+print("Image 1             : 64 Gray Levels")
+print("Image 2             : 16 Gray Levels")
+print("Image 3             : 4 Gray Levels")
+print("-----------------------------------------")
+print("Observation:")
+print("- Higher gray levels preserve image detail.")
+print("- Lower gray levels reduce detail.")
+print("- Very low levels create visible intensity bands.")
+print("=========================================")
