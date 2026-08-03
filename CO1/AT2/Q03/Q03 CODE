@@ -1,0 +1,51 @@
+ IMAGE QUALITY
+                              │
+      ┌───────────────────────┼────────────────────────┐
+      │                       │                        │
+Spatial Resolution      Intensity Resolution      Image Acquisition
+(Pixel Resolution)          (Bit Depth)               Process
+      │                       │                        │
+      │                       │                        │
+ Number of Pixels       Number of Gray Levels    Camera / Scanner
+ (Width × Height)          (2ⁿ Levels)               Sensor
+      │                       │
+      │                       │
+      ├──────────────┐        ├──────────────┐
+      │              │        │              │
+High Resolution  Low Resolution  High Bit Depth  Low Bit Depth
+      │              │        │              │
+More Pixels     Fewer Pixels  Smooth Tones  Banding Effect
+      │              │        │              │
+Better Detail   Loss of Detail More Contrast Loss of Contrast
+Sharper Image   Pixelation    Better Accuracy Quantization Error
+      │              │        │              │
+      └──────────────┴────────┴──────────────┘
+                     │
+             Image Representation
+                     │
+      ┌──────────────┼──────────────┐
+      │              │              │
+  Grayscale      Color Image     Binary Image
+      │              │              │
+  8-bit (256)    RGB (24-bit)   1-bit (2 Levels)
+                     │
+                     │
+              Image Processing
+                     │
+ ┌────────────┬────────────┬─────────────┬─────────────┐
+ │            │            │             │
+Enhancement Filtering Segmentation Compression
+ │            │            │             │
+ │            │            │             │
+Improves   Removes     Accurate      Reduces
+Visibility Noise       Detection     File Size
+                     │
+               Computer Vision
+                     │
+      ┌──────────────┼────────────────┐
+      │              │                │
+Object Detection Image Classification Medical Imaging
+                     │
+               Decision Making
+                     │
+               Practical Applications
