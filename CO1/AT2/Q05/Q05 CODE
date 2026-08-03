@@ -1,0 +1,49 @@
+  COMPUTER VISION SYSTEM CAPABILITIES
+                                         │
+ ┌───────────────────────────────────────┼────────────────────────────────────────┐
+ │                                       │                                        │
+Hardware Capabilities              Software Capabilities                 AI & Learning Capabilities
+ │                                       │                                        │
+ ├── CPU/GPU Processing                 ├── Image Processing                 ├── Machine Learning
+ ├── Memory (RAM)                       ├── OpenCV Libraries                 ├── Deep Learning (CNN)
+ ├── Storage                            ├── Feature Extraction               ├── Transfer Learning
+ ├── Camera Resolution                  ├── Segmentation                     ├── Model Training
+ ├── CCD/CMOS Sensor                    ├── Object Detection                 └── Model Optimization
+ └── Network Connectivity               └── Image Classification
+                                         │
+                                         │
+                           Computer Vision Functions
+                                         │
+      ┌──────────────────────────────────┼──────────────────────────────────┐
+      │                                  │                                  │
+ Image Acquisition                Image Analysis                  Decision Making
+      │                                  │                                  │
+      ├── Capture                  ├── Feature Extraction          ├── Prediction
+      ├── Sampling                 ├── Pattern Recognition         ├── Recognition
+      └── Quantization             ├── Object Tracking             └── Automation
+                                   └── Scene Understanding
+                                         │
+                                         │
+                          Vision-Based Application Selection
+                                         │
+ ┌───────────────────────────────────────┼────────────────────────────────────────┐
+ │                                       │                                        │
+Medical Imaging                 Autonomous Vehicles                  Face Recognition
+ │                                       │                                        │
+High Resolution              Real-Time Processing              High Recognition Accuracy
+High Accuracy                Fast Decision Making              Secure Authentication
+ │                                       │                                        │
+ ├───────────────────────────────────────┼────────────────────────────────────────┤
+ │                                       │                                        │
+Industrial Inspection              Robotics                  Smart Surveillance
+                                         │
+                                         │
+                          System Performance Evaluation
+                                         │
+            ┌────────────────────────────┼────────────────────────────┐
+            │                            │                            │
+         Accuracy                     Speed                     Reliability
+            │                            │                            │
+            └────────────────────────────┼────────────────────────────┘
+                                         │
+                                Effective Vision System
