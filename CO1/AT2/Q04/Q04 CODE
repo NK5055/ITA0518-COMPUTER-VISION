@@ -1,0 +1,56 @@
+IMAGE ACQUISITION CONDITIONS
+                                      │
+ ┌────────────────────────────────────┼────────────────────────────────────┐
+ │                                    │                                    │
+Illumination                    Camera Characteristics             Environmental Factors
+ │                                    │                                    │
+ ├── Light Intensity                 ├── Sensor (CCD/CMOS)          ├── Weather
+ ├── Light Direction                 ├── Resolution                 ├── Dust/Smoke
+ ├── Light Color                     ├── Lens Quality               ├── Temperature
+ └── Shadows                         ├── Focus                      └── Motion
+                                     └── Exposure Time
+                                      │
+                                      │
+                         Image Acquisition Process
+                                      │
+                 ┌────────────────────┼────────────────────┐
+                 │                    │                    │
+           Image Quality         Image Noise         Image Distortion
+                 │                    │                    │
+        ┌────────┼────────┐      ┌────┼────┐         ┌────┼─────┐
+        │        │        │      │         │         │          │
+    Brightness Contrast Sharpness Gaussian Salt &   Blur   Geometric
+                                  Noise  Pepper             Distortion
+                                      │
+                                      │
+                           Image Preprocessing
+                                      │
+      ┌───────────────────────────────┼───────────────────────────────┐
+      │                               │                               │
+ Noise Removal                 Contrast Enhancement             Image Restoration
+      │                               │                               │
+      └───────────────────────────────┼───────────────────────────────┘
+                                      │
+                              Feature Extraction
+                                      │
+               ┌──────────────────────┼──────────────────────┐
+               │                      │                      │
+            Edges                 Corners               Texture
+                                      │
+                                      │
+                           Computer Vision Algorithms
+                                      │
+      ┌───────────────────────────────┼───────────────────────────────┐
+      │                               │                               │
+ Image Classification         Object Detection              Image Segmentation
+                                      │
+                                      │
+                           Application Performance
+                                      │
+ ┌────────────────────────────────────┼────────────────────────────────────┐
+ │                                    │                                    │
+Medical Imaging             Autonomous Vehicles             Face Recognition
+Industrial Inspection       Robotics                        Remote Sensing
+                                      │
+                                      │
+                             Accurate Decision Making
