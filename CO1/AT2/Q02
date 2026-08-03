@@ -1,0 +1,42 @@
+   COMPUTER VISION SYSTEM
+                                   │
+        ┌──────────────────────────┼──────────────────────────┐
+        │                          │                          │
+   Image Acquisition         Image Processing          High-Level Vision
+        │                          │                          │
+        │                          │                          │
+  ┌─────┼─────┐           ┌────────┼─────────┐        ┌───────┼────────┐
+  │     │     │           │        │         │        │       │        │
+Camera Sensor Lens   Preprocessing Enhancement Segmentation Feature Extraction
+(CCD/CMOS) Focus        │        │         │            │
+  │                     │        │         │            │
+  │               Noise Removal Contrast  Object    Edge, Corner,
+  │               Filtering     Stretching Detection Texture, Shape
+  │                     │        │         │            │
+  └─────────────────────┴────────┴─────────┴────────────┘
+                                   │
+                             Feature Representation
+                                   │
+                  ┌────────────────┼────────────────┐
+                  │                │                │
+             Feature Vector   Descriptor      Dimensionality
+                                                  Reduction
+                                   │
+                           Machine Learning /
+                          Deep Learning Models
+                                   │
+         ┌─────────────────────────┼──────────────────────────┐
+         │                         │                          │
+   Classification             Object Detection         Image Segmentation
+         │                         │                          │
+         └─────────────────────────┼──────────────────────────┘
+                                   │
+                         Scene Understanding
+                                   │
+         ┌─────────────────────────┼──────────────────────────┐
+         │                         │                          │
+ Face Recognition        Medical Diagnosis      Autonomous Driving
+                                   │
+                            Decision Making
+                                   │
+                              Final Output
