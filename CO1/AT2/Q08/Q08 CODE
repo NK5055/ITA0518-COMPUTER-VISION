@@ -1,0 +1,48 @@
+ SPATIAL RESOLUTION
+                                   │
+      ┌────────────────────────────┼────────────────────────────┐
+      │                            │                            │
+ Image Acquisition           Sampling Rate              Pixel Density
+      │                            │                            │
+ ┌────┼────┐                 ┌─────┼─────┐               ┌──────┼──────┐
+ │    │    │                 │     │     │               │      │      │
+Camera Sensor Lens      High Sampling Low Sampling   High PPI  Low PPI
+(CCD/CMOS) Quality          Rate          Rate        (Pixel Density)
+ │                          │             │              │        │
+ │                          │             │              │        │
+Captures Image        More Pixels     Fewer Pixels   Sharper   Pixelated
+Information           More Detail     Loss of Detail Images    Images
+ │                          │             │              │
+ └──────────────────────────┼─────────────┴──────────────┘
+                            │
+                    Image Resolution
+                  (Width × Height Pixels)
+                            │
+        ┌───────────────────┼────────────────────┐
+        │                   │                    │
+   High Resolution     Medium Resolution    Low Resolution
+        │                   │                    │
+More Detail         Balanced Quality     Reduced Detail
+Better Clarity      Moderate Storage     Small File Size
+        │
+        │
+ Image Processing & Computer Vision
+        │
+ ┌──────┼──────────────┬──────────────┬──────────────┐
+ │      │              │              │
+Feature  Object      Image         Pattern
+Extraction Detection Classification Recognition
+        │
+        │
+ Application Requirements
+        │
+ ┌──────┼──────────────┬──────────────┬──────────────┐
+ │      │              │              │
+Medical Face         Satellite   Autonomous
+Imaging Recognition  Imaging     Vehicles
+ │      │              │              │
+Requires Very     Requires     Requires     Requires
+High Resolution   High Detail  Fine Detail Real-Time Accuracy
+        │
+        │
+ Improved Accuracy and Reliable Decision Making
