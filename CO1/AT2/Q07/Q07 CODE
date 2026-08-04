@@ -1,0 +1,64 @@
+DIGITAL IMAGE FORMATION
+                                      │
+        ┌─────────────────────────────┼─────────────────────────────┐
+        │                             │                             │
+  Real-World Scene              Illumination                  Imaging System
+        │                             │                             │
+        └─────────────────────────────┼─────────────────────────────┘
+                                      │
+                               Image Formation
+                                      │
+                     Light Reflected from Objects
+                                      │
+                               Camera Lens
+                                      │
+                          Image Sensor (CCD/CMOS)
+                                      │
+                                 SENSING
+                                      │
+             Converts Light Energy into Electrical Signals
+                                      │
+                              Analog Image Signal
+                                      │
+                    Analog-to-Digital Converter (ADC)
+                                      │
+        ┌─────────────────────────────┼─────────────────────────────┐
+        │                             │                             │
+     SAMPLING                  QUANTIZATION                  ENCODING
+        │                             │                             │
+ Divides Image into           Assigns Intensity          Converts Values
+ Individual Pixels            Levels to Pixels            into Binary Data
+        │                             │                             │
+ Spatial Resolution            Intensity Resolution      Digital Storage
+ (Number of Pixels)             (Bit Depth/Gray Levels)
+        │                             │
+        ├──────────────┐       ┌──────┴──────────────┐
+        │              │       │                     │
+ High Resolution  Low Resolution  High Bit Depth  Low Bit Depth
+        │              │       │                     │
+ More Detail     Pixelation   Smooth Tones      Banding Effect
+ Better Clarity  Loss of Detail Better Contrast Quantization Error
+        └──────────────┬──────────────┬──────────────┘
+                       │              │
+                 DIGITAL IMAGE (Pixel Matrix)
+                       │
+          ┌────────────┼─────────────┐
+          │            │             │
+   Grayscale Image  RGB Color Image  Binary Image
+                       │
+                Image Processing
+                       │
+ ┌─────────────────────┼──────────────────────────┐
+ │                     │                          │
+Enhancement      Feature Extraction         Compression
+ │                     │                          │
+Noise Removal      Edges, Corners,        Efficient Storage
+Contrast Improve   Texture, Shape         & Transmission
+                       │
+                Computer Vision
+                       │
+      ┌────────────────┼────────────────┐
+      │                │                │
+Object Detection Image Classification Medical Imaging
+                       │
+                 Decision Making
