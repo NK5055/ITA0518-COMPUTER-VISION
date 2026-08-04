@@ -1,0 +1,48 @@
+ DIGITAL IMAGE SAMPLING
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+ Continuous Image        Sampling Process      Sampling Rate
+        │                     │                     │
+        │                     │                     │
+ Analog Signal         Convert to Pixels    High / Low Sampling
+        │                     │                     │
+        └─────────────────────┼─────────────────────┘
+                              │
+                      Spatial Resolution
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+   High Sampling Rate   Adequate Sampling   Low Sampling Rate
+          │                   │                   │
+ More Pixels          Meets Nyquist Rule    Fewer Pixels
+ Better Detail        Accurate Sampling     Loss of Detail
+          │                   │                   │
+          └───────────────────┼───────────────────┘
+                              │
+                          ALIASING
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+      Jagged Edges      False Patterns      Moiré Effect
+                              │
+                              │
+                      Image Distortion
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+      Blur             Information Loss    Reduced Accuracy
+                              │
+                              │
+                     Corrective Techniques
+                              │
+      ┌───────────────────────┼────────────────────────┐
+      │                       │                        │
+ Anti-Aliasing Filter   Increase Sampling Rate   Optical Filtering
+                              │
+                              │
+                      Improved Image Quality
+                              │
+                  Better Computer Vision Results
+                              │
+     Object Detection • Medical Imaging • Remote Sensing
