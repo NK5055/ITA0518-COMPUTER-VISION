@@ -1,0 +1,45 @@
+IMAGE SENSING MECHANISMS
+                                   │
+        ┌──────────────────────────┼──────────────────────────┐
+        │                          │                          │
+     Image Sensor            Sensor Characteristics     Acquisition Conditions
+        │                          │                          │
+ ┌──────┼────────┐          ┌──────┼──────────┐         ┌─────┼─────────┐
+ │      │        │          │      │          │         │     │         │
+ CCD   CMOS  Infrared   Resolution Sensitivity Dynamic  Illumination Exposure Temperature
+ Sensor Sensor Sensor                  Range
+        │                          │                          │
+        └──────────────────────────┼──────────────────────────┘
+                                   │
+                           Light Detection
+                                   │
+             Converts Light Energy into Electrical Signals
+                                   │
+                           Analog Image Signal
+                                   │
+                   Analog-to-Digital Conversion (ADC)
+                                   │
+         ┌─────────────────────────┼─────────────────────────┐
+         │                         │                         │
+     Noise Generation        Signal Quality          Image Acquisition
+         │                         │                         │
+ ┌───────┼──────────┐       ┌──────┼──────┐          ┌───────┼──────────┐
+ │       │          │       │      │      │          │       │          │
+Thermal Shot   Read Noise   SNR  Contrast Brightness Sharpness Color Accuracy
+Noise   Noise
+         │                         │                         │
+         └─────────────────────────┼─────────────────────────┘
+                                   │
+                          Image Preprocessing
+                                   │
+            Noise Reduction • Filtering • Enhancement
+                                   │
+                           Feature Extraction
+                                   │
+                          Computer Vision Tasks
+                                   │
+      Object Detection • Image Classification • Face Recognition
+                                   │
+                         High Acquisition Quality
+                                   │
+                     Accurate Decision Making
